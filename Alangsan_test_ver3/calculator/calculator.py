@@ -1,7 +1,6 @@
 import requests
 import numpy as np
 import pandas as pd
-import statistics
 
 #convert bitcoin price to USD
 def btc_to_usd(price: str) -> str:  
@@ -58,12 +57,4 @@ def cal_median(data: list) -> str:
             price_list.append("error")
         else:
             price_list.append(np.nanmedian(data[:, col], axis=0))
-    return price_list
-'''
-def cal_median2(data):
-    new_data = []
-    for i in data:
-        if i is not np.nan:
-            new_data.append(float(i))
-    return statistics.median(new_data)
-'''        
+    return price_list   
