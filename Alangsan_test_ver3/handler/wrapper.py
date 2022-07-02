@@ -79,11 +79,3 @@ def call_api(input_: list) -> list:
     c4 = ([float(kraken(coin)) for coin in input_])
     c5 = ([float(okx(coin)) for coin in input_])
     return np.array([c1, c2, c3, c4 ,c5])
-'''
-a = 0
-call_api(["BTC","ETH","USDT"])
-print(np.nanmedian(a))
-''
-for i in a:
-    print(i)
-    '''
